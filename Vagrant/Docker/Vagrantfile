@@ -13,10 +13,12 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.define "d1" do |d1|
-	  d1.vm.box = "hashicorp/bionic64"
+	  #d1.vm.box = "hashicorp/bionic64"
+    d1.vm.box = "bento/ubuntu-20.04"
 	  d1.vm.provider "hyperv"
 	  d1.vm.network "public_network", bridge: "external"
 	  d1.vm.synced_folder ".", "/vagrant", disabled: true
+    d1.vm.hostname = "d1"
 	  d1.vm.provider "hyperv" do |h|
 		h.memory = 1024
 		h.cpus = 2
@@ -31,10 +33,12 @@ Vagrant.configure("2") do |config|
 	  SHELL
   end
     config.vm.define "d2" do |d2|
-	  d2.vm.box = "hashicorp/bionic64"
+	  #d2.vm.box = "hashicorp/bionic64"
+    d2.vm.box = "bento/ubuntu-20.04"
 	  d2.vm.provider "hyperv"
 	  d2.vm.network "public_network", bridge: "external"
 	  d2.vm.synced_folder ".", "/vagrant", disabled: true
+    d2.vm.hostname = "d2"
 	  d2.vm.provider "hyperv" do |h|
 		h.memory = 1024
 		h.cpus = 2
@@ -49,10 +53,12 @@ Vagrant.configure("2") do |config|
 	  SHELL
   end
     config.vm.define "d3" do |d3|
-	  d3.vm.box = "hashicorp/bionic64"
+	  #d3.vm.box = "hashicorp/bionic64"
+    d3.vm.box = "bento/ubuntu-20.04"
 	  d3.vm.provider "hyperv"
 	  d3.vm.network "public_network", bridge: "external"
 	  d3.vm.synced_folder ".", "/vagrant", disabled: true
+    d3.vm.hostname = "d3"
 	  d3.vm.provider "hyperv" do |h|
 		h.memory = 1024
 		h.cpus = 2
